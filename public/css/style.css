@@ -1,0 +1,436 @@
+body {
+    font-family: 'Poppins', sans-serif ;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.destinations-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.destination-card {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.view-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.destination-details {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-header img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.destination-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.booking-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.reviews-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.review-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-review-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.edit-destination-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.update-btn {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+
+.agencies-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.agencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.agency-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.agency-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-btn {
+    display: inline-block;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.agency-details {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agency-header h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.agency-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.agency-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.services-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.services-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-section li {
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-agency-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.update-btn {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+
+.reviews-container, .review-details, .edit-review-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.view-btn, .add-review-btn, .edit-btn, .update-btn, .delete-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.view-btn { background: #007bff; }
+.add-review-btn { background: #28a745; }
+.edit-btn { background: #ffc107; }
+.update-btn { background: #007bff; }
+.delete-btn { background: #dc3545; border: none; cursor: pointer; }
+
+.delete-btn:hover, .edit-btn:hover, .update-btn:hover {
+    opacity: 0.8;
+}
+
+.create-review-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f8f9fa ;
+    margin: 0;
+    padding: 0;
+}
+
+
+.login-container, .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.login-box, .signup-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 380px;
+    transition: 0.3s ease;
+}
+
+.login-box:hover, .signup-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ff512f;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 81, 47, 0.2);
+}
+
+.btn-login, .btn-signup {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-login:hover, .btn-signup:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(221, 36, 118, 0.3);
+}
+
+
+
+
+
+.welcome-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.welcome-btn {
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.welcome-:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(221, 36, 118, 0.3);
+}
