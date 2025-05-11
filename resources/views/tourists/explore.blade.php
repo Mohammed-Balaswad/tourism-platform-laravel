@@ -181,7 +181,9 @@
 }
 
 </style>
-
+@if (session('success'))
+<div class="alert-success" style="text-align: center; color: rgb(255, 255, 255); font-weight: bold;  background-color: green; padding: 15px; font-size: larger;">{{ session('success') }}</div>
+@endif
 <div class="hero">
     <h1>اكتشف أجمل الوجهات السياحية</h1>
     <p>انطلق في مغامرة لا تُنسى حول العالم مع دليلنا الشامل لأفضل الوجهات والتجارب</p>
@@ -194,6 +196,7 @@
         <a href="#agencies" style="color: white; text-decoration: none; font-weight: bold;">الوكالات</a>
         <a href="#reviews" style="color: white; text-decoration: none; font-weight: bold;">التقييمات</a>
         <a href="#about" style="color: white; text-decoration: none; font-weight: bold;">حول الموقع</a>
+   
     </div>
 
     <!-- زر الحساب وتسجيل الخروج على اليسار -->
@@ -290,7 +293,7 @@
             <ul style="font-size: 18px; color: #444; line-height: 1.7; list-style: disc; padding-right: 20px;">
                 <li>محمد صالح بالسود</li>
                 <li>محمد صالح باظبي</li>
-                <li>محمد فايز باشامخة</li>
+                <li>محمد فائز باشامخة</li>
             </ul>
         </div>
 

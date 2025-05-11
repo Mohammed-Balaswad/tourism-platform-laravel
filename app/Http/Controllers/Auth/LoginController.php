@@ -35,7 +35,7 @@ class LoginController extends Controller
                 }
             }
         
-            return redirect()->route('login.show')->with('error', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.');
+            return redirect()->route('login.show')->with('success', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.');
         
         
 

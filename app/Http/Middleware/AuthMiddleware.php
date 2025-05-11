@@ -17,7 +17,8 @@ class AuthMiddleware
     public function handle($request, Closure $next): Response
     {
         if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'يجب تسجيل الدخول للوصول إلى هذه الصفحة');
+            return back()->with('/')->with('success', 'يجب تسجيل الدخول للوصول إلى هذه الصفحة');
+
         }
 
         return $next($request);

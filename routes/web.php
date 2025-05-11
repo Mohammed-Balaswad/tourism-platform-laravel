@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AgencyController;
-use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Auth\SignupController as AuthSignupController;
 use App\Http\Controllers\Auth\LoginController as AuthLoginController;
 use App\Http\Controllers\SuperAdmin\DestinationsController as SuperAdminDestinationController;
@@ -43,7 +41,7 @@ Route::post('/signup', [AuthSignupController::class, 'register'])->name('registe
 
                                          //! مسارات السائح
 
-Route::middleware(['auth' ,'role:3' ::class])->group(function () {
+Route::middleware(['auth' ,'role:3'])->group(function () {
     Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
     Route::get('/explore/destinations/{destination}', [ExploreController::class, 'show'])->name('explore.destinations.show'); 
 
@@ -128,126 +126,3 @@ Route::middleware(['auth', 'role:1'])->group(function () {
     Route::get('/superadmin/reviews', [SuperAdminReviewController::class, 'index'])->name('superadmin.reviews.index');
     Route::delete('/superadmin/reviews/{id}', [SuperAdminReviewController::class, 'destroy'])->name('superadmin.reviews.destroy');
 });
-
-
-
-
-
-
-
-
-
-
-
-// Route::middleware([App\Http\Middleware\AuthMiddleware::class])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
-
-// Route::get('/destinations', [DestinationController::class, 'index'])->name('destinations.index');
-// Route::get('/destinations/{destination}', [DestinationController::class, 'show'])->name('destinations.show');
-
-// Route::middleware(['auth', 'role:1,2'])->group(function () {
-//     Route::get('/destinations/create', [DestinationController::class, 'create'])->name('destinations.create');
-//     Route::post('/destinations', [DestinationController::class, 'store'])->name('destinations.store');
-//     Route::get('/destinations/{destination}/edit', [DestinationController::class, 'edit'])->name('destinations.edit');
-//     Route::put('/destinations/{destination}', [DestinationController::class, 'update'])->name('destinations.update');
-//     Route::delete('/destinations/{destination}', [DestinationController::class, 'destroy'])->name('destinations.destroy');
-// });
-
-
-// مسارات لعرض الوجهات، متاحة للجميع
-// Route::get('/destinations', [DestinationController::class, 'index'])->name('destinations.index');
-// Route::get('/destinations/{destination}', [DestinationController::class, 'show'])->name('destinations.show');
-
-// المسارات المحمية، متاحة فقط للمشرفين والسوبر مشرفين
-// Route::middleware(['auth', 'role:superadmin,admin'])->group(function () {
-//     Route::get('/superadmin/destinations', [DestinationController::class, 'index'])->name('superadmin.destinations.index');
-//     Route::get('/superadmin/destinations/create', [DestinationController::class, 'create'])->name('superadmin.destinations.create');
-//     Route::post('/superadmin/destinations', [DestinationController::class, 'store'])->name('superadmin.destinations.store');
-//     Route::get('/superadmin/destinations/{destination}/edit', [DestinationController::class, 'edit'])->name('superadmin.destinations.edit');
-//     Route::put('/superadmin/destinations/{destination}', [DestinationController::class, 'update'])->name('superadmin.destinations.update');
-//     Route::delete('/superadmin/destinations/{destination}', [DestinationController::class, 'destroy'])->name('superadmin.destinations.destroy');
-// });
-
-
-
-
-
-
-
-
-// Route::get('/agencies', [AgencyController::class, 'index'])->name('agencies.index');
-// Route::get('/agencies/{agency}', [AgencyController::class, 'show'])->name('agencies.show');
-
-// Route::middleware([App\Http\Middleware\AuthMiddleware::class])->group(function () {
-//     Route::get('/agencies/create', [AgencyController::class, 'create'])->name('agencies.create');
-//     Route::post('/agencies', [AgencyController::class, 'store'])->name('agencies.store');
-//     Route::get('/agencies/{agency}/edit', [AgencyController::class, 'edit'])->name('agencies.edit');
-//     Route::put('/agencies/{agency}', [AgencyController::class, 'update'])->name('agencies.update');
-//     Route::delete('/agencies/{agency}', [AgencyController::class, 'destroy'])->name('agencies.destroy');
-// });
-
-
-
-
-
-// Route::get('/superadmin/dashboard', [SuperAdminController::class, 'index'])->name('superadmin.dashboard');
-// Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-// Route::get('/destinations', [DestinationController::class, 'index'])->name('destinations.index');
-
-
-// سوبر مشرف
-// Route::get('/superadmin/dashboard', function () {
-//     return view('superadmin.dashboard');
-// })->name('superadmin.dashboard');
-
-// مشرف
-// Route::get('/admin/dashboard', function () {
-//     return view('admin.dashboard');
-// })->name('admin.dashboard');
-
-// // سائح
-// Route::get('/destinations', function () {
-//     return view('destinations.index');
-// })->name('destinations.index');
-
-
-//superadmin
-
-
-// Route::middleware(['auth', 'role:1'])->group(function () {
-//     Route::get('/superadmin/dashboard', [SuperAdminDashboardController::class, 'index'])->name('superadmin.dashboard');
-//     Route::get('/superadmin/admins', [SuperAdminsController::class, 'admins'])->name('superadmin.admins');
-//     Route::get('/superadmin/admins/create', [SuperAdminsController::class, 'createAdmin'])->name('superadmin.admins.create');
-//     Route::post('/superadmin/admins/store', [SuperAdminsController::class, 'storeAdmin'])->name('superadmin.admins.store');
-//     Route::get('/superadmin/admins/{id}/edit', [SuperAdminsController::class, 'editAdmin'])->name('superadmin.admins.edit');
-//     Route::put('/superadmin/admins/{id}/update', [SuperAdminsController::class, 'updateAdmin'])->name('superadmin.admins.update');
-//     Route::delete('/superadmin/admins/{id}', [SuperAdminsController::class, 'destroyAdmin'])->name('superadmin.admins.delete');
-//     });
-
-
-//  Route::middleware(['auth', 'role:1'])->group(function () {
-//         Route::get('/superadmin/tourists', [SuperAdminTouristController::class, 'index'])->name('superadmin.tourists.index');
-//         Route::delete('/superadmin/tourists/{id}', [SuperAdminTouristController::class, 'destroy'])->name('superadmin.tourists.destroy');
-//     });
-        
-// Route::middleware(['auth', 'role:1'])->group(function () {
-//         Route::get('/superadmin/agencies', [SuperAdminAgencyController::class, 'index'])->name('superadmin.agencies.index');
-//         Route::delete('/superadmin/agencies/{id}', [SuperAdminAgencyController::class, 'destroy'])->name('superadmin.agencies.destroy');
-//         Route::get('/superadmin/agencies/create', [SuperAdminAgencyController::class, 'create'])->name('superadmin.agencies.create');
-//         Route::post('/superadmin/agencies', [SuperAdminAgencyController::class, 'store'])->name('superadmin.agencies.store');
-//         Route::get('/superadmin/agencies/{id}/edit', [SuperAdminAgencyController::class, 'edit'])->name('superadmin.agencies.edit');
-//         Route::put('/superadmin/agencies/{id}', [SuperAdminAgencyController::class, 'update'])->name('superadmin.agencies.update');
-        
-//     });
-    
-// Route::middleware(['auth', 'role:1'])->group(function () {
-//         Route::get('/superadmin/reviews', [SuperAdminReviewController::class, 'index'])->name('superadmin.reviews.index');
-//         Route::delete('/superadmin/reviews/{id}', [SuperAdminReviewController::class, 'destroy'])->name('superadmin.reviews.destroy');
-//     });
-
-
-    
-//admin

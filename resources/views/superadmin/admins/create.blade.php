@@ -7,7 +7,7 @@
     <h2 style="text-align: center; margin-bottom: 30px; color: #0d47a1;">إضافة مشرف جديد</h2>
 
     <form method="POST" action="{{ route('superadmin.admins.store') }}">
-        @csrf
+        @csrf   
 
         <div style="margin-bottom: 20px;">
             <label for="name" style="display: block; font-weight: bold; margin-bottom: 5px;">الاسم:</label>

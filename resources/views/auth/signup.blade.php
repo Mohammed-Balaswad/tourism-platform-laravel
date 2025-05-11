@@ -93,7 +93,7 @@
 
             <div class="input-group">
                 <label for="name">الاسم الكامل</label>
-                <input type="text" name="name" id="name" placeholder="محمد صالح بالسود "required>
+                <input type="text" name="name" id="name" placeholder="الاسم الكامل"required>
             </div>
 
             <div class="input-group">

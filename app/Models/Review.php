@@ -11,10 +11,7 @@ class Review extends Model
 
     protected $fillable = ['user_id', 'destination_id', 'rating', 'comment'];
 
-    // public function user() {
-    //     return $this->belongsTo(User::class);
-    // }
-    // داخل Review.php
+ 
 public function user() {
     return $this->belongsTo(User::class, 'user_id');
 }
@@ -24,9 +21,5 @@ public function destination() {
 }
 
     
-    // public function destination() {
-    //     return $this->belongsTo(Destination::class);
-    // }
-      
-
+   
 }

@@ -160,19 +160,15 @@
             <ul>
                 @forelse($destination->agencies as $agency)
                     <li style="font-size: 21px">
-                        {{ $agency->name }}
+                        <a href="{{$agency->website}}" target="_blank">{{ $agency->name }}</a>
                     </li>
                 @empty
                     <li>لا توجد وكالات مرتبطة.</li>
                 @endforelse
-            </ul>
-
-            @if(isset($agency))
-                <p>
-                    <a href="{{ $agency->website }}" target="_blank" class="booking-btn">احجز الآن</a>
-                </p>
-            @endif
+            </ul>        
         </div>
+        
+        <hr>
 
         {{-- ✅ قسم التقييمات --}}
         <div class="reviews-section">

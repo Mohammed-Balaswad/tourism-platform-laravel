@@ -1,15 +1,20 @@
 @extends('layouts.admin')
+@if (session('success'))
+<div class="alert-success" style="text-align: center; color: rgb(255, 255, 255); font-weight: bold;  background-color: red; padding: 15px; font-size: larger;">{{ session('success') }}</div>
+@endif
 
 @section('title', 'لوحة تحكم المشرف')
 
 @section('content')
 <h2 class="dashboard-title"> لوحة تحكم المشرف</h2>
 
+
 <div class="dashboard-cards">
     <div class="dashboard-card">
         <div class="card-icon" >
                 <i class="fa-solid fa-map-location-dot fa-3x" style="color: rgb(0, 119, 166)"></i>
             </div>
+            
         <h5>عدد الوجهات الكلي</h5>
         <p>{{ $totalDestinationsCount }}</p>
     </div>
