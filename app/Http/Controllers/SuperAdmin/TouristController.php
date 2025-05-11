@@ -15,6 +15,6 @@ class TouristController extends Controller
     
     public function destroy($id) {
         User::where('id', $id)->where('role_id', 3)->delete(); // حذف السائح بناءً على role_id
-        return redirect()->route('superadmin.tourists.index')->with('success', 'تم حذف السائح بنجاح');
+        return redirect()->route('superadmin.tourists.index')->with('error', 'تم حذف السائح بنجاح');
     }
 }

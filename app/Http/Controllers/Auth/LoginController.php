@@ -31,11 +31,11 @@ class LoginController extends Controller
                         return redirect()->route('admin.dashboard')->with('success', 'مرحبًا بك، مشرف!');
                     case 3: // سائح
                     default:
-                        return redirect()->route('explore')->with('success', 'مرحبًا بك، سائح!');
+                        return redirect()->route('explore')->with('success', 'مرحبًا بك');
                 }
             }
         
-            return redirect()->route('login.show')->with('success', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.');
+            return redirect()->route('login.show')->with('error', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.');
         
         
 

@@ -99,6 +99,15 @@
         border-radius: 5px;
         color: #155724;
         margin-bottom: 15px;
+        font-weight: bold;   
+        }
+        .alert-error {
+        background-color: rgb(255, 205, 205);
+        padding: 10px;
+        border-radius: 5px;
+        color: red;
+        margin-bottom: 15px;
+        font-weight: bold;   
         }
         
         .destinations-grid {
@@ -295,6 +304,10 @@
         font-size: 13px;
         color: #777;
     }
+    .value:hover {
+        background-color: #ceddf3;
+        }
+        
     
     </style>
 </head>

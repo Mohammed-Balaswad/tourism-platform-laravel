@@ -49,9 +49,7 @@
         border-bottom: 1px solid #ddd;
     }
 
-    .value:hover {
-        background-color: #cfcfcf;
-    }
+    
 
     .text-muted {
         color: #999;
@@ -114,9 +112,9 @@
         <h1>قائمة الوكالات</h1>
         <a href="{{ route('superadmin.agencies.create') }}" style="display:inline-block;margin-bottom:15px;background:#0d47a1;color:white;padding:8px 16px;border-radius:5px;text-decoration:none;">+ إضافة وكالة جديدة</a>
 
-    @if (session('success'))
-        <div class="alert-success">{{ session('success') }}</div>
-    @endif
+        @if (session('error'))
+        <div class="alert-error">{{ session('error') }}</div>
+        @endif
 
     <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
         <thead style="background-color: #0d47a1; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">

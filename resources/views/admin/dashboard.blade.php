@@ -1,7 +1,5 @@
 @extends('layouts.admin')
-@if (session('success'))
-<div class="alert-success" style="text-align: center; color: rgb(255, 255, 255); font-weight: bold;  background-color: red; padding: 15px; font-size: larger;">{{ session('success') }}</div>
-@endif
+
 
 @section('title', 'لوحة تحكم المشرف')
 

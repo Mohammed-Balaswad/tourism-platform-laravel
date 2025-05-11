@@ -1,11 +1,26 @@
 @extends('layouts.app')
-@if (session('success'))
-<div class="alert-success" style="text-align: center; color: rgb(255, 255, 255); font-weight: bold;  background-color: red; padding: 15px; font-size: larger;">{{ session('success') }}</div>
-@endif
+
+<style>
+     .alert-error {
+        text-align: center;
+        background-color: red;
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+        font-weight: bold;   
+        }
+</style>
+
+
 
 @section('content')
 <div class="login-container">
+    
     <div class="login-box">
+        @if (session('error'))
+<div class="alert-error">{{ session('error') }}</div>
+@endif
         <h2>تسجيل الدخول</h2>
         <form action="{{ route('login') }}" method="POST">
             @csrf

@@ -30,7 +30,7 @@
         }
 
         nav a:hover {
-            color: #ff5722;
+            color: #c72e00;
         }
 
 
@@ -148,7 +148,6 @@
 
 
 
-
 .destination-card:hover {
     transform: translateY(-5px);
 }
@@ -180,19 +179,44 @@
     transform: scale(1.05);
 }
 
+.alert-success {
+        text-align: center;
+        background-color: green;
+        padding: 10px;
+        border-radius: 5px;
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-weight: bold;
+        }
+        .alert-error {
+        text-align: center;
+        background-color: red;
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+        font-weight: bold;   
+        }
+
 </style>
+
 @if (session('success'))
-<div class="alert-success" style="text-align: center; color: rgb(255, 255, 255); font-weight: bold;  background-color: green; padding: 15px; font-size: larger;">{{ session('success') }}</div>
+<div class="alert-success" style="margin: 0px">{{ session('success') }}</div>
 @endif
+
+@if (session('error'))
+<div class="alert-error" style="margin: 0px">{{ session('error') }}</div>
+@endif
+
 <div class="hero">
     <h1>اكتشف أجمل الوجهات السياحية</h1>
     <p>انطلق في مغامرة لا تُنسى حول العالم مع دليلنا الشامل لأفضل الوجهات والتجارب</p>
 </div>
-<nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #00346b;">
+<nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: linear-gradient(to right, #007bff, #0056b3);">
 
     <!-- روابط على اليمين -->
-    <div style="display: flex; gap: 20px;">
-        <a href="#destinations" style="color: white; text-decoration: none; font-weight: bold;">الوجهات</a>
+    <div style="display: flex; gap: 20px; ">
+        <a  href="#destinations" style="color: white; text-decoration: none; font-weight: bold;">الوجهات</a>
         <a href="#agencies" style="color: white; text-decoration: none; font-weight: bold;">الوكالات</a>
         <a href="#reviews" style="color: white; text-decoration: none; font-weight: bold;">التقييمات</a>
         <a href="#about" style="color: white; text-decoration: none; font-weight: bold;">حول الموقع</a>
@@ -207,7 +231,7 @@
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" style="background: transparent; border: none; color: white; font-weight: bold; cursor: pointer;">
-                <i class="fa-solid fa-right-from-bracket fa-lg"></i> <samp style="padding: 5px"> تسجيل الخروج</samp>
+                <i class="fa-solid fa-right-from-bracket fa-lg"></i> <samp > تسجيل الخروج</samp>
                
             </button>
         </form>

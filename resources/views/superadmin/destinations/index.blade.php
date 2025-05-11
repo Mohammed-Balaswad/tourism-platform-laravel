@@ -6,9 +6,15 @@
 <div class="main-content">
     <h1>إدارة الوجهات السياحية</h1>
     <a href="{{ route('superadmin.destinations.create') }}"   style="display:inline-block;margin-bottom:15px;background:#0d47a1;color:white;padding:8px 16px;border-radius:5px;text-decoration:none;">إضافة وجهة جديدة</a>
+    
     @if (session('success'))
     <div class="alert-success">{{ session('success') }}</div>
     @endif
+
+    @if (session('error'))
+    <div class="alert-error">{{ session('error') }}</div>
+    @endif
+
     <div class="destinations-grid">
         @foreach($destinations as $destination)
             <div class="destination-card">

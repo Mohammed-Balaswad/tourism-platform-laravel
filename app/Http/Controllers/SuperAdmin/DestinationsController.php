@@ -168,6 +168,6 @@ public function store(Request $request)
     public function destroy(Destination $destination)
     {
         $destination->delete();
-        return redirect()->route('superadmin.destinations.index')->with('success', 'تم حذف الوجهة بنجاح!');
+        return redirect()->route('superadmin.destinations.index')->with('error', 'تم حذف الوجهة بنجاح!');
     }
 }

@@ -24,7 +24,7 @@ class RoleMiddleware
 
 
        if (!Auth::check()) {
-           return redirect()->route('login')->with('error', 'يجب تسجيل الدخول أولاً');
+           return back()->with('error', 'يجب تسجيل الدخول أولاً');
        }
 
        $roles = explode(',', $roles);  // يقوم بتحويل سلسلة الأدوار (مثل "1,2,3") إلى مصفوفة: [1, 2, 3]
@@ -35,7 +35,7 @@ class RoleMiddleware
        */
 
        if (!in_array($userRoleId, $roles)) {
-        return back()->with('success', 'ليس لديك صلاحية الوصول');
+        return back()->with('error', 'ليس لديك صلاحية الوصول');
        }
        /*
        يتحقق هل دور المستخدم من ضمن الأدوار المسموح بها.

@@ -61,8 +61,8 @@
 <div class="table-container">
     <h1>تقييمات وجهاتي</h1>
 
-    @if (session('success'))
-    <div class="alert-success">{{ session('success') }}</div>
+    @if (session('error'))
+    <div class="alert-error">{{ session('error') }}</div>
     @endif
 
     <table>
@@ -78,7 +78,7 @@
         </thead>
         <tbody>
             @forelse ($reviews as $review)
-                <tr>
+                <tr class="value">
                     <td>{{ $review->user->name ?? 'غير معروف' }}</td>
                     <td>{{ $review->destination->name ?? 'غير معروفة' }}</td>
                     <td>⭐ {{ $review->rating }} / 5</td>

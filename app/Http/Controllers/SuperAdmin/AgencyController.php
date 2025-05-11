@@ -80,7 +80,7 @@ public function destroy($id)
     $agency = Agency::findOrFail($id);
     $agency->delete();
 
-    return redirect()->route('superadmin.agencies.index')->with('success', 'تم حذف الوكالة بنجاح');
+    return redirect()->route('superadmin.agencies.index')->with('error', 'تم حذف الوكالة بنجاح');
 }
 
 }

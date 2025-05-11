@@ -96,7 +96,7 @@ class MyDestinationController extends Controller
         $destination = Destination::where('admin_id', Auth::id())->findOrFail($id);
         $destination->delete();
 
-        return redirect()->route('admin.my_destinations.index')->with('success', 'تم حذف الوجهة بنجاح.');
+        return redirect()->route('admin.my_destinations.index')->with('error', 'تم حذف الوجهة بنجاح.');
     }
 
 

@@ -3,13 +3,14 @@
 @section('title', 'السياح')
 
 @section('content')
+
+
+
 <div class="main-content">
     <h1>قائمة السياح</h1>
 
-    @if(session('success'))
-        <div style="background: #d4edda; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-            {{ session('success') }}
-        </div>
+    @if (session('error'))
+    <div class="alert-error">{{ session('error') }}</div>
     @endif
 
     <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
@@ -24,7 +25,7 @@
         </thead>
         <tbody>
             @forelse($tourists as $index => $tourist)
-                <tr style="text-align: center; border-bottom: 1px solid #ddd;">
+                <tr class="value">
                     <td style="padding: 10px;">{{ $index + 1 }}</td>
                     <td style="padding: 10px;">{{ $tourist->name }}</td>
                     <td style="padding: 10px;">{{ $tourist->email }}</td>

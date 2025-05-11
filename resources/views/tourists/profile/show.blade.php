@@ -3,9 +3,18 @@
 @section('title', 'حسابي')
 
 @section('content')
-<section style="padding: 40px 20px; background: #f3f4f6; min-height: 100vh;">
-    <div style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
 
+<section style="padding: 40px 20px; background: #f3f4f6; min-height: 100vh;">
+
+   
+
+    <div style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
+ @if (session('success'))
+    <div class="alert-success">{{ session('success') }}</div>
+    @endif
+    @if (session('error'))
+    <div class="alert-error">{{ session('error') }}</div>
+    @endif
         {{-- معلومات الحساب --}}
         <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
             <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;">معلومات الحساب</h2>
@@ -28,7 +37,7 @@
 
         {{-- كارد التقييمات --}}
         <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-            <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;">تقييماتي</h2>
+        <h2 style="font-size: 24px; margin-bottom: 20px; color: #333;">تقييماتي</h2>
 
             @forelse ($user->reviews as $review)
     <div style="border-bottom: 1px solid #eee; padding: 10px 0;">

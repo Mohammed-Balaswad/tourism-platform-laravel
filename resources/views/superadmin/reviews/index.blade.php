@@ -35,9 +35,7 @@
         border-bottom: 1px solid #e0e0e0;
     }
 
-    .value:hover {
-        background-color: #cfcfcf;
-    }
+    
 
     .btn-delete {
         background-color: #e74c3c;
@@ -49,16 +47,14 @@
         font-size: 14px;
     }
 
-    .btn-delete:hover {
-        background-color: #c0392b;
-    }
+  
 </style>
 
 <div class="table-container">
     <h1>قائمة التقييمات</h1>
 
-    @if (session('success'))
-        <div class="alert-success">{{ session('success') }}</div>
+    @if (session('error'))
+    <div class="alert-error">{{ session('error') }}</div>
     @endif
 
     <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">

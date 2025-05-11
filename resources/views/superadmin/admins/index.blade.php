@@ -1,12 +1,18 @@
 @extends('layouts.superadmin')
 
 @section('content')
+
+
+
     <h1>إدارة المشرفين</h1>
 
     <a href="{{ route('superadmin.admins.create') }}" style="display:inline-block;margin-bottom:15px;background:#0d47a1;color:white;padding:8px 16px;border-radius:5px;text-decoration:none;">+ إضافة مشرف</a>
     
     @if (session('success'))
     <div class="alert-success">{{ session('success') }}</div>
+    @endif
+    @if (session('error'))
+    <div class="alert-error">{{ session('error') }}</div>
     @endif
 
     <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
@@ -19,7 +25,7 @@
         </thead>
         <tbody>
             @foreach ($admins as $admin)
-            <tr style="text-align: center; border-bottom: 1px solid #ddd;">
+            <tr class="value">
                     <td style="padding:10px;border:1px solid #ddd;">{{ $admin->name }}</td>
                     <td style="padding:10px;border:1px solid #ddd;">{{ $admin->email }}</td>
                     <td style="padding:10px;border:1px solid #ddd;">

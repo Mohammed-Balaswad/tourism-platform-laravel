@@ -106,6 +106,24 @@
         .login-box p a:hover {
             text-decoration: underline;
         }
+        .alert-success {
+        text-align: center;
+        background-color: #d4edda;
+        padding: 10px;
+        border-radius: 5px;
+        color: #155724;
+        margin-bottom: 15px;
+        font-weight: bold;
+        }
+        .alert-error {
+        text-align: center;
+        background-color: rgb(255, 205, 205);
+        padding: 10px;
+        border-radius: 5px;
+        color: red;
+        margin-bottom: 15px;
+        font-weight: bold;   
+        }
     </style>
 </head>
 <body>

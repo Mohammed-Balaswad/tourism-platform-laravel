@@ -80,7 +80,7 @@ public function destroyAdmin($id)
 
     $admin->delete();
 
-    return redirect()->route('superadmin.admins')->with('success', 'تم حذف المشرف بنجاح.');
+    return redirect()->route('superadmin.admins')->with('error', 'تم حذف المشرف بنجاح.');
 }
 
 

@@ -23,6 +23,6 @@ class ReviewController extends Controller
     public function destroy($id)
     {
         Review::findOrFail($id)->delete();
-        return redirect()->route('admin.reviews.index')->with('success', 'تم حذف التقييم بنجاح');
+        return redirect()->route('admin.reviews.index')->with('error', 'تم حذف التقييم بنجاح');
     }
 }

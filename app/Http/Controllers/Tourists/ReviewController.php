@@ -102,6 +102,6 @@ class ReviewController extends Controller
         }
 
         $review->delete();
-        return redirect()->route('tourists.profile.show', $review->destination_id)->with('success', 'تم حذف التقييم بنجاح!');
+        return redirect()->route('tourists.profile.show', $review->destination_id)->with('error', 'تم حذف التقييم بنجاح!');
     }
 }
