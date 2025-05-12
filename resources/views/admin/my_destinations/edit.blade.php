@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            <label for="agencies">اختر وكالات (اختياري):</label>
+            <label for="agencies">اختر وكالات:</label>
             <select name="agencies[]" id="agencies" multiple class="form-control">
                 @foreach($agencies as $agency)
                     <option value="{{ $agency->id }}"
@@ -41,7 +41,7 @@
             @if($destination->image)
             <p style="margin-top:10px;">الصورة الحالية:</p>
             <img src="{{ asset('storage/' . $destination->image) }}" alt="صورة الوجهة" width="150">
-            <label for="image">تغيير الصورة (اختياري):</label>
+            <label for="image">تغيير الصورة :</label>
             <input type="file" name="image" id="image" class="form-control">
             @endif
         </div>

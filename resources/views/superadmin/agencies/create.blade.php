@@ -62,7 +62,7 @@
         </div>
 
         <div class="form-group">
-            <label for="website">الموقع الإلكتروني (اختياري):</label>
+            <label for="website">الموقع الإلكتروني :</label>
             <input type="url" name="website" id="website" class="form-control">
         </div>
 
@@ -72,7 +72,7 @@
         </div>
 
         <div class="form-group">
-            <label for="admin_id">اختيار المشرف المسؤول (اختياري):</label>
+            <label for="admin_id">اختيار المشرف المسؤول:</label>
             <select name="admin_id" id="admin_id" class="form-control">
                 <option value="">-- بدون تحديد --</option>
                 @foreach ($admins as $admin)

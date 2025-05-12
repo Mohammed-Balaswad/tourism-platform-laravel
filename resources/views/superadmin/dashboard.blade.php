@@ -1,6 +1,11 @@
 @extends('layouts.superadmin')
 
 @section('content')
+
+@if (session('error'))
+<div class="alert-error" style="margin: 0px">{{ session('error') }}</div>
+@endif
+
     <h1 style="margin-bottom: 20px; color: #0d47a1;">لوحة التحكم</h1>
     <div class="dashboard-cards">
         <!-- Card for Destinations -->

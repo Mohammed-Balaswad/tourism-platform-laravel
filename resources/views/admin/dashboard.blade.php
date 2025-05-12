@@ -4,6 +4,9 @@
 @section('title', 'لوحة تحكم المشرف')
 
 @section('content')
+
+
+
 <h2 class="dashboard-title"> لوحة تحكم المشرف</h2>
 
 

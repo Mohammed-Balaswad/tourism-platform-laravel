@@ -112,44 +112,7 @@
         background-color: #ceddf3;
         }
 
-        /* .destinations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .destination-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .destination-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .destination-card h3 {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .destination-card p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        
-        
-        
-        .destination-card .btn-danger {
-            background-color: #dc3545;
-            color: white;
-            } */
+      
             .destination-card .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -235,40 +198,7 @@
     .btn-submit:hover {
         background-color: #1565c0;
     }
-    /* .dashboard-title {
-        font-size: 24px;
-        color: #0d47a1;
-        margin-bottom: 20px;
-    }
-
-    .dashboard-cards {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-
-    .dashboard-card {
-        flex: 1;
-        min-width: 200px;
-        background-color: #f0f4f8;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .dashboard-card h5 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #333;
-    }
-
-    .dashboard-card p {
-        font-size: 24px;
-        font-weight: bold;
-        color: #0d47a1;
-    } */
+   
     .dashboard-title {
         font-size: 24px;
         color: #0d47a1;
@@ -371,6 +301,11 @@
 <div class="main">
     <div class="header">
         <div>مرحبًا، {{ Auth::user()->name }}</div>
+
+        @if (session('access'))
+        <div class="alert-error">{{ session('access') }}</div>
+        @endif
+
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit"><i class="fa-solid fa-right-from-bracket"></i> تسجيل خروج</button>

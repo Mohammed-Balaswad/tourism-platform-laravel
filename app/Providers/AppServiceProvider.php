@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\RoleMiddleware;
+use App\Http\Middleware\AuthMiddleware;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-    Route::middleware('role', RoleMiddleware::class);
-    Route::aliasMiddleware('role', RoleMiddleware::class);
+        Route::aliasMiddleware('role', RoleMiddleware::class);
     }
 
 }

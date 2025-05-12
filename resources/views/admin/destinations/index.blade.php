@@ -3,6 +3,11 @@
 @section('title', 'كل الوجهات')
 
 @section('content')
+
+@if (session('error'))
+<div class="alert-error" style="margin: 0px">{{ session('error') }}</div>
+@endif
+
     <h1 class="mb-4 text-center">كل الوجهات السياحية</h1>
 
     <div class="destinations-grid">

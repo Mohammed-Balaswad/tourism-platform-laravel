@@ -61,6 +61,7 @@
 <div class="table-container">
     <h1>تقييمات وجهاتي</h1>
 
+   
     @if (session('error'))
     <div class="alert-error">{{ session('error') }}</div>
     @endif

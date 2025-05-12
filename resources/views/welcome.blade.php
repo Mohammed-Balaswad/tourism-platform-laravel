@@ -140,6 +140,15 @@
     text-align:right;
 
 }
+.alert-error {
+        text-align: center;
+        background-color: red;
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+        font-weight: bold;   
+        }
 
     </style>
 </head>
@@ -153,7 +162,11 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+    @if (session('error'))
+<div class="alert-error" style="margin: 0px">{{ session('error') }}</div>
+@endif
     <div class="hero">
+        
        
         <div class="hero-text">
             <h1>اكـتشـف أجمل الوجهات السياحية</h1>

@@ -22,13 +22,6 @@ class DestinationsController extends Controller
     }
     
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    // public function create()
-    // {
-    //     return view('superadmin.destinations.create');
-    // }
 
     public function create()
 {
@@ -37,31 +30,7 @@ class DestinationsController extends Controller
     return view('superadmin.destinations.create', compact('admins' , 'agencies'));
 }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-//     public function store(Request $request)
-// {
-//     $request->validate([
-//         'name' => 'required|string|max:255',
-//         'description' => 'required|string',
-//         'best_time_to_visit' => 'required|string',
-//         'booking_link' => 'required|url',
-//         'image' => 'required|image|mimes:jpg,jpeg,png'
-//     ]);
-
-//     $path = $request->file('image')->store('destinations', 'public');
-
-//     Destination::create([
-//         'name' => $request->name,
-//         'description' => $request->description,
-//         'best_time_to_visit' => $request->best_time_to_visit,
-//         'booking_link' => $request->booking_link,
-//         'image' => $path
-//     ]);
-
-//     return redirect()->route('superadmin.destinations.index')->with('success', 'تمت إضافة الوجهة بنجاح!');
-// }
+ 
 
 public function store(Request $request)
 {
@@ -96,9 +65,7 @@ public function store(Request $request)
 
     return redirect()->route('superadmin.destinations.index')->with('success', 'تمت إضافة الوجهة بنجاح!');
 }
-
-
-    
+   
 
     /**
      * Display the specified resource.

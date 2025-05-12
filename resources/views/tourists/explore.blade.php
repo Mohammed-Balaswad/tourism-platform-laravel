@@ -101,26 +101,6 @@
         height: 60px;
         overflow: hidden;
     }
-  
-    /* .about {
-        background: linear-gradient(to right, #3795fa, #00346b);
-        text-align: center;
-        padding: 10px 20px;
-        margin-top: 150px;
-        height: 500px;
-    } */
-    /* .about h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        padding-top: -2000px;
-        color: white;
-    }
-    .about p {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 18px;
-        line-height: 1.8;
-    } */
 
     .destinations-grid {
     display: flex;
@@ -204,8 +184,8 @@
 <div class="alert-success" style="margin: 0px">{{ session('success') }}</div>
 @endif
 
-@if (session('error'))
-<div class="alert-error" style="margin: 0px">{{ session('error') }}</div>
+@if (session('access'))
+<div class="alert-error" style="margin: 0px">{{ session('access') }}</div>
 @endif
 
 <div class="hero">

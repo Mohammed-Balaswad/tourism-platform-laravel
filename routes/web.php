@@ -41,7 +41,8 @@ Route::post('/signup', [AuthSignupController::class, 'register'])->name('registe
 
                                          //! مسارات السائح
 
-Route::middleware(['auth' ,'role:3'])->group(function () {
+Route::middleware(['role:3'])->group(function () {
+
     Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
     Route::get('/explore/destinations/{destination}', [ExploreController::class, 'show'])->name('explore.destinations.show'); 
 
@@ -65,7 +66,7 @@ Route::middleware(['auth' ,'role:3'])->group(function () {
 
                                             //! مسارات الادمن
 
-Route::middleware(['auth', 'role:2'])->group(function () {
+Route::middleware(['role:2'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 
     Route::get('/admin/destinations', [AdminDestinationController::class, 'index'])->name('admin.destinations.index');
@@ -91,7 +92,7 @@ Route::middleware(['auth', 'role:2'])->group(function () {
     
                                         //! مسارات السوبر ادمن
 
-Route::middleware(['auth', 'role:1'])->group(function () {
+Route::middleware(['role:1'])->group(function () {
 
     Route::get('/superadmin/dashboard', [SuperAdminDashboardController::class, 'index'])->name('superadmin.dashboard');
 

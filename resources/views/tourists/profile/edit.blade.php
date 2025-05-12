@@ -25,7 +25,7 @@
         <input type="email" id="email" name="email" value="{{ old('email', Auth::user()->email) }}" required
                style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc;">
 
-        <label for="password">كلمة المرور الجديدة (اختياري):</label>
+        <label for="password">كلمة المرور الجديدة :</label>
         <input type="password" id="password" name="password"
                style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc;">
 

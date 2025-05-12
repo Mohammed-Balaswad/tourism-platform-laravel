@@ -16,18 +16,18 @@
             {{ $destination->admin ? $destination->admin->name : 'غير مُسند' }}
         </p>     
         <p><strong>الوكالات المرتبطة:</strong></p>
-<ul>
-@forelse($destination->agencies as $agency)
-    <li style="font-size: 21px">
-        {{ $agency->name }} 
-    </li>
-@empty
-    <li>لا توجد وكالات مرتبطة.</li>
-@endforelse
-</ul>
+            <ul>
+                @forelse($destination->agencies as $agency)
+                    <li style="font-size: 21px">
+                        <a href="{{$agency->website}}" target="_blank">{{ $agency->name }}</a>
+                    </li>
+                @empty
+                    <li>لا توجد وكالات مرتبطة.</li>
+                @endforelse
+            </ul>  
    
-        <p><a href="{{ $agency->website }}" target="_blank" class="booking-btn">احجز الآن</a></p>
     </div>
+    <hr>
 
     <!-- ✅ عرض التقييمات الخاصة بالوجهة -->
     <div class="reviews-section">

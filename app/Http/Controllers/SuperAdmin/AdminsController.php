@@ -5,9 +5,7 @@ namespace App\Http\Controllers\SuperAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use \App\Models\Agency;
-use \App\Models\Destination;
-use App\Models\Review;
+
 
 class AdminsController extends Controller
 {

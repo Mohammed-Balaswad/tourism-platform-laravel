@@ -318,7 +318,6 @@
     <a href="{{ route('admin.dashboard') }}"><i class="fa-solid fa-chart-line"></i> لوحة التحكم</a>
     <a href="{{ route('admin.destinations.index') }}"><i class="fa-solid fa-map-location-dot"></i> الوجهات</a>
     <a href="{{ route('admin.my_destinations.index') }}"><i class="fa-solid fa-location-dot"></i> وجهاتي</a>
-    {{-- <a href="#"><i class="fa-solid fa-users"></i>السياح</a> --}}
     <a href="{{ route('admin.my_agencies.index') }}"><i class="fa-solid fa-building"></i> الوكالات</a>
     <a href="{{ route('admin.reviews.index') }}"><i class="fa-solid fa-star-half-stroke"></i> التقييمات</a>
 </div>
@@ -326,6 +325,11 @@
 <div class="main">
     <div class="header">
         <div>مرحبًا، {{ Auth::user()->name }}</div>
+
+        @if (session('access'))
+        <div class="alert-error">{{ session('access') }}</div>
+        @endif
+
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit"><i class="fa-solid fa-right-from-bracket"></i> تسجيل خروج</button>

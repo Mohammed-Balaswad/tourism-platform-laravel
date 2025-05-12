@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            <label for="agencies">اختر وكالة/وكالات (اختياري):</label>
+            <label for="agencies">اختر وكالة/وكالات:</label>
             <select name="agencies[]" id="agencies" multiple class="form-control">
                 @foreach($agencies as $agency)
                     <option value="{{ $agency->id }}">{{ $agency->name }}</option>

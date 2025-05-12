@@ -38,18 +38,6 @@ class LoginController extends Controller
             return redirect()->route('login.show')->with('error', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.');
         
         
-
-
-        // $request->validate([
-        //     'email' => 'required|email',
-        //     'password' => 'required|string|min:6',
-        // ]);
-
-        // if (Auth::attempt($request->only('email', 'password'))) {
-        //     return redirect('/dashboard')->with('success', 'تم تسجيل الدخول بنجاح!');
-        // }
-
-        // return redirect()->route('login.show')->with('error', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.');
     }
 
     public function logout()
