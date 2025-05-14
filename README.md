@@ -10,19 +10,19 @@ The project facilitates tourists to explore destinations and enables different l
 5) Fully hand-crafted Blade views without external libraries<br>
 6) Key Pages: Landing, Explore, Destination Details, Reviews, Auth pages<br>
 <hr>
-Requirements:<br>
+<strong>Requirements:</strong><br>
 PHP >= 8.0<br>
 Composer<br>
 MySQL<br>
 Laravel 10+<br>
 XAMPP or Laravel Valet/Homestead<br>
 <hr>
-Local Setup Instructions:<br>
+<strong>Local Setup Instructions:</strong><br>
 Clone the repository:
 git clone https://github.com/Mohammed-Balaswad/tourism-platform-laravel.git<br>
 cd tourism-platform<br>
 <hr>
-Install dependencies:<br>
+<strong>Install dependencies:</strong><br>
 composer install<br>
 Copy .env file and configure DB:<br>
 cp .env.example .env<br>
@@ -36,17 +36,17 @@ Run the server:<br>
 php artisan serve<br>
 Visit http://127.0.0.1:8000<br>
 <hr>
-Demo Credentials:<br>
+<strong>Demo Credentials:</strong><br>
 Tourist: tourist@example.com | 123456<br>
 Admin: admin@example.com | 123456<br>
 Super Admin: superadmin@example.com | 123456<br>
 <hr>
-Technical Highlights:<br>
+<strong>Technical Highlights:</strong><br>
 - Custom Middleware for role-based access control<br>
 - Well-structured folder hierarchy for each user role<br>
 - Manual UI built with Blade templates and raw CSS<br>
   <hr>
-Project Structure:<br>
+<strong>Project Structure:</strong><br>
 routes/
 ├── web.php - All route definitions<br>
 app/Http/Middleware/ - Role middleware<br>
@@ -63,7 +63,7 @@ resources/views/<br>
 ├── admin/<br>
 └── superadmin/<br>
 <hr>
-Authors:<br>
+<strong>Authors:</strong><br>
 👤 Mohammed Saleh Balaswad<br>
 📧 muhammed.design20@gmail.com<br>
 GitHub: https://github.com/Mohammed-Balaswad<br>
@@ -71,7 +71,7 @@ GitHub: https://github.com/Mohammed-Balaswad<br>
 👤 Mohammed Faiz Bashamkha<br>
 📧 mb877402@gmail.com<br>
 GitHub: https://github.com/mohammed-bashamkha<br>
-
+<br>
 👤 Mohammed Saleh Badhabi<br>
 📧 mo7bds@gmail.com<br>
 GitHub: https://github.com/username<br>
