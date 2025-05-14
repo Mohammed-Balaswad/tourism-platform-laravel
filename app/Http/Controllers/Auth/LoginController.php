@@ -23,15 +23,27 @@ class LoginController extends Controller
         
             if (Auth::attempt($request->only('email', 'password'))) {
                 $user = Auth::user();
+                /*
+                Auth::attempt(...):
+                هذه الدالة تحاول تسجيل دخول المستخدم باستخدام البريد الإلكتروني وكلمة المرور المرسلة من النموذج.
+                            
+                 إذا كانت بيانات الاعتماد صحيحة وتم تسجيل الدخول، true  ترجع attempt()
+                إذا لم تكن كذلك.  false أو
+                            
+               من الريكوست وأرسلها لمحاولة التحقق "email" و"password" يعني: خذ فقط القيمتين $request->only('email', 'password')
+                            
+                Auth::user():
+                $user فهنا يتم الحصول على المستخدم الحالي المسجّل دخوله وتخزينه في المتغير . (true أعادت attempt اي)،إذا تم تسجيل الدخول بنجاح 
+                */
         
                 switch ($user->role_id) {
                     case 1: // سوبر مشرف
-                        return redirect()->route('superadmin.dashboard')->with('success', 'مرحبًا بك، سوبر مشرف!');
+                        return redirect()->route('superadmin.dashboard')->with('welcome', 'مرحبًا بك، سوبر مشرف!');
                     case 2: // مشرف
-                        return redirect()->route('admin.dashboard')->with('success', 'مرحبًا بك، مشرف!');
+                        return redirect()->route('admin.dashboard')->with('welcome', 'مرحبًا بك، مشرف!');
                     case 3: // سائح
                     default:
-                        return redirect()->route('explore')->with('success', 'مرحبًا بك');
+                        return redirect()->route('explore')->with('welcome', 'مرحبًا بك');
                 }
             }
         

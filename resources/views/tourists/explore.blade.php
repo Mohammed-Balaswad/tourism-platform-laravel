@@ -180,8 +180,8 @@
 
 </style>
 
-@if (session('success'))
-<div class="alert-success" style="margin: 0px">{{ session('success') }}</div>
+@if (session('welcome'))
+<div class="alert-success" style="margin: 0px">{{ session('welcome') }}</div>
 @endif
 
 @if (session('access'))
