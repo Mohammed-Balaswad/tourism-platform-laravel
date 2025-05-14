@@ -2,7 +2,7 @@
 A fully-featured travel guide platform built with Laravel and Blade only (no Vite, no Bootstrap).
 The project facilitates tourists to explore destinations and enables different levels of administrators to manage the content with strict access control.
    <hr> 
-Features:
+Features: <br>
 1) Three user roles: Tourist, Admin, Super Admin
 2) Custom Middleware-based role permissions
 3) Separate dashboard for each role
