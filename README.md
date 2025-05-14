@@ -3,14 +3,13 @@ A fully-featured travel guide platform built with Laravel and Blade only (no Vit
 The project facilitates tourists to explore destinations and enables different levels of administrators to manage the content with strict access control.
    <hr> 
 <strong>Features:</strong> <br>
-<ul>
-<li>1) Three user roles: Tourist, Admin, Super Admin</li><br>
-<li>2) Custom Middleware-based role permissions</li> <br>
+1) Three user roles: Tourist, Admin, Super Admin<br>
+2) Custom Middleware-based role permissions <br>
 3) Separate dashboard for each role<br>
 4) Manage destinations, agencies, and reviews<br>
 5) Fully hand-crafted Blade views without external libraries<br>
 6) Key Pages: Landing, Explore, Destination Details, Reviews, Auth pages
-  </ul>  <br>
+<br>
 <hr>
 <strong>Requirements:</strong><br>
 PHP >= 8.0<br>
