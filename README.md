@@ -50,16 +50,17 @@ Project Structure:<br>
 routes/
 ├── web.php - All route definitions<br>
 app/Http/Middleware/ - Role middleware<br>
-app/Http/Controllers/
-├── Auth/
-├── Tourists/
-├── Admin/
+app/Http/Controllers/<br>
+├── Auth/<br>
+├── Tourists/<br>
+├── Admin/<br>
 └── SuperAdmin/<br>
+
 resources/views/<br>
-├── layouts/
-├── auth/
-├── tourists/
-├── admin/
+├── layouts/<br>
+├── auth/<br>
+├── tourists/<br>
+├── admin/<br>
 └── superadmin/<br>
 <hr>
 Authors:<br>
@@ -71,8 +72,8 @@ GitHub: https://github.com/Mohammed-Balaswad<br>
 📧 mb877402@gmail.com<br>
 GitHub: https://github.com/mohammed-bashamkha<br>
 
-👤 Mohammed<br>
-📧 youremail@example.com<br>
+👤 Mohammed Saleh Badhabi<br>
+📧 mo7bds@gmail.com<br>
 GitHub: https://github.com/username<br>
 <hr>
 Final Notes:<br>
