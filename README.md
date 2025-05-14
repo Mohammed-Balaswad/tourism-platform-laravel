@@ -16,65 +16,64 @@ Composer<br>
 MySQL<br>
 Laravel 10+<br>
 XAMPP or Laravel Valet/Homestead<br>
-
-Local Setup Instructions:
+<hr>
+Local Setup Instructions:<br>
 Clone the repository:
-git clone https://github.com/Mohammed-Balaswad/tourism-platform-laravel.git
-cd tourism-platform
+git clone https://github.com/Mohammed-Balaswad/tourism-platform-laravel.git<br>
+cd tourism-platform<br>
+<hr>
+Install dependencies:<br>
+composer install<br>
+Copy .env file and configure DB:<br>
+cp .env.example .env<br>
+Update DB_DATABASE, DB_USERNAME, DB_PASSWORD in .env<br>
 
-Install dependencies:
-composer install
+Create DB and run migrations:<br>
+php artisan key:generate<br>
+php artisan migrate --seed<br>
 
-Copy .env file and configure DB:
-cp .env.example .env
-Update DB_DATABASE, DB_USERNAME, DB_PASSWORD in .env
-
-Create DB and run migrations:
-php artisan key:generate
-php artisan migrate --seed
-
-Run the server:
-php artisan serve
-Visit http://127.0.0.1:8000
-
-Demo Credentials:
-Tourist: tourist@example.com | 123456
-Admin: admin@example.com | 123456
-Super Admin: superadmin@example.com | 123456
-
-Technical Highlights:
-- Custom Middleware for role-based access control
-- Well-structured folder hierarchy for each user role
-- Manual UI built with Blade templates and raw CSS
-  
-Project Structure:
+Run the server:<br>
+php artisan serve<br>
+Visit http://127.0.0.1:8000<br>
+<hr>
+Demo Credentials:<br>
+Tourist: tourist@example.com | 123456<br>
+Admin: admin@example.com | 123456<br>
+Super Admin: superadmin@example.com | 123456<br>
+<hr>
+Technical Highlights:<br>
+- Custom Middleware for role-based access control<br>
+- Well-structured folder hierarchy for each user role<br>
+- Manual UI built with Blade templates and raw CSS<br>
+  <hr>
+Project Structure:<br>
 routes/
-├── web.php - All route definitions
-app/Http/Middleware/ - Role middleware
+├── web.php - All route definitions<br>
+app/Http/Middleware/ - Role middleware<br>
 app/Http/Controllers/
 ├── Auth/
 ├── Tourists/
 ├── Admin/
-└── SuperAdmin/
-resources/views/
+└── SuperAdmin/<br>
+resources/views/<br>
 ├── layouts/
 ├── auth/
 ├── tourists/
 ├── admin/
-└── superadmin/
+└── superadmin/<br>
+<hr>
+Authors:<br>
+👤 Mohammed Saleh Balaswad<br>
+📧 muhammed.design20@gmail.com<br>
+GitHub: https://github.com/Mohammed-Balaswad<br>
 
-Authors:
-👤 Mohammed Saleh Balaswad
-📧 muhammed.design20@gmail.com
-GitHub: https://github.com/Mohammed-Balaswad
+👤 Mohammed Faiz Bashamkha<br>
+📧 mb877402@gmail.com<br>
+GitHub: https://github.com/mohammed-bashamkha<br>
 
-👤 Mohammed
-📧 youremail@example.com
-GitHub: https://github.com/username
-
-👤 Mohammed
-📧 youremail@example.com
-GitHub: https://github.com/username
-
-Final Notes:
+👤 Mohammed<br>
+📧 youremail@example.com<br>
+GitHub: https://github.com/username<br>
+<hr>
+Final Notes:<br>
 This project was developed as a university project with a focus on clean code, organized structure, and realistic permissions. It is a solid base for any future tourism platform.
