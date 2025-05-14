@@ -4,8 +4,8 @@ The project facilitates tourists to explore destinations and enables different l
    <hr> 
 <strong>Features:</strong> <br>
 <ul>
-1) Three user roles: Tourist, Admin, Super Admin<br>
-2) Custom Middleware-based role permissions<br>
+<li>1) Three user roles: Tourist, Admin, Super Admin</li><br>
+<li>2) Custom Middleware-based role permissions</li> <br>
 3) Separate dashboard for each role<br>
 4) Manage destinations, agencies, and reviews<br>
 5) Fully hand-crafted Blade views without external libraries<br>
